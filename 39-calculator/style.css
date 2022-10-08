@@ -1,0 +1,66 @@
+body{
+  background-color: black;
+}
+#calculator {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid white;
+  padding: 10px;
+  box-shadow: 0 0 3px;
+}
+/* Calculate Area Style */
+#calc-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#calc-area > textarea {
+  border: 2px solid rgb(111, 110, 110);
+  background: rgb(35, 35, 34);
+  color: white;
+  box-shadow: 0 0 3px;
+  min-height: 60px;
+  resize: none;
+  font-size: 1.8em;
+  letter-spacing: 2.5px;
+  margin-bottom: 20px;
+}
+/* buttons */
+/* Button area style */
+#button-area {
+  padding: 10px 0;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-group > span {
+  display: inline-flex;
+  flex: 1 ;
+  padding: 15px 10px;
+  justify-content: center;
+  align-items: center;
+  background: #2a2a2a;
+  margin: 4px;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  box-shadow: 0 0 3px #979494;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.button-group > span.calc {
+  flex: 2.5;
+  border-radius: 7px;
+  background: #330d0a;
+}
+
+.button-group > span:hover {
+  opacity: 1;
+}

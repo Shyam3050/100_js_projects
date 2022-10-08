@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+#container{
+    position: relative;
+    
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 64px;
+    border: 1px solid white;
+}
+#canvas1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(170, 87, 87);
+    /* height: 400px; */
+    /* width: 400px; */
+}
+#runRigt{
+    display: none;
+}

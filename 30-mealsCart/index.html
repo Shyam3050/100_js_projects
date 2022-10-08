@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>mealCart</title>
+  </head>
+  <body>
+    <div class="overlay hidden">
+      <div class="back_drop"></div>
+      <div class="cart_list">
+        <ul class="cart_items">
+         
+        </ul>
+        <div class="total_amount">
+          <span>Total Amount</span>
+          <span class="_total_price">$0.00</span>
+        </div>
+        <div class="action_btns">
+          <button class="_close">Close</button>
+          <button class="_order">Order</button>
+        </div>
+      </div>
+    </div>
+    <!-- navbar start -->
+    <nav>
+      <div class="nav-header">
+        <h1 class="logo">React Meal</h1>
+        <button class="cart">
+          <span class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+            </svg>
+          </span>
+          <span class="cart-btn">Cart</span>
+          <span class="cart-badge">0</span>
+        </button>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- img banner start -->
+    <div class="banner">
+      <img src="./assest/meals.jpg" alt="meals image" class="banner-img" />
+    </div>
+    <!-- img banner end -->
+
+    <!-- items start -->
+    <main>
+      <section class="meals">
+        <div class="meals_card">
+          <ul class="meal_lists"></ul>
+        </div>
+      </section>
+    </main>
+    <!-- items end -->
+    <script src="./data.js"></script>
+    <script src="./main.js"></script>
+    <!-- <script src="./script.js"></script> -->
+  </body>
+</html>
