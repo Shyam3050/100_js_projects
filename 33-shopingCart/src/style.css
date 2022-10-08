@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: rgb(196, 195, 195);
+}
+i {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* navbar start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212529;
+  color: white;
+  padding: 25px 60px;
+  margin-bottom: 30px;
+}
+.cart {
+  position: relative;
+  background-color: #fff;
+  color: #212529;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+.cartItem {
+  position: absolute;
+  top: -1rem;
+  right: -0.5rem;
+  font-size: 1rem;
+  background-color: red;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  color: white;
+}
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(223px, 223px));
+  gap: 30px;
+  justify-content: center;
+  margin: 1rem;
+}
+.item {
+  border: 2px solid #212529;
+  border-radius: 4px;
+}
+.details {
+  padding: 10px;
+}
+.details > * {
+  margin-bottom: 10px;
+}
+.price_quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+.bi-plus-lg {
+  color: green;
+}
+.bi-dash-lg {
+  color: red;
+}
+
+/* styles for cart.html page */
+.text-center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.homeBtn {
+  cursor: pointer;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  margin-top: 1rem;
+}
+.homeBtn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.bi-x-lg {
+  color: red;
+  font-weight: bold;
+}
+.shopping-cart {
+  width: 350px;
+  margin: 0 auto;
+}
+.cart-item {
+  display: flex;
+  border: 2px solid #212529;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.title-price-x {
+  font-size: 1.25rem;
+  width: 14rem;
+  display: flex;
+  justify-content: space-between;
+}
+.title-price-x span , .clear, .checkout {
+  cursor: pointer;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.clear{
+  background-color: transparent;
+  color: #212529;
+  margin-right: 1rem;
+}
+.checkout{
+  background-color: green;
+  border-color: green;
+}
