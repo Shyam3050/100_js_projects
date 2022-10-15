@@ -18,6 +18,15 @@ const generateShop = () => {
   return (shop.innerHTML = shopItemsData
     .map((item) => {
       const { id, name, price, desc, img } = item;
+      const search = basket.find((item) => item.id === id);
+      let buttons = null;
+      if (search) {
+        buttons = `
+        <i class="bi bi-dash-lg" onclick= "decrement(${id})"></i>
+  <div class="quantity" id = ${id}>${!search ? 0 : search.item}</div>
+  <i class="bi bi-plus-lg" onclick = "increment(${id})"></i>
+        `;
+      }
       return `<div class="item" id="product-id-${id}">
     <img src="./${img}"  width = "220"alt="clothing store" />
     <div class="details">
@@ -26,7 +35,11 @@ const generateShop = () => {
       <div class="price_quantity">
         <h2>$ ${price}</h2>
         <div class="buttons" id = ${id + "1"}>
-          <p onClick = addBtn(${id + "1"})> Add </p>
+        ${
+          buttons
+            ? buttons
+            : '<p onClick = addBtn(${id + "1"}) style = "cursor: pointer"> Add </p>'
+        }  
         </div>
       </div>
     </div>
@@ -52,15 +65,15 @@ function increment(id) {
 }
 function decrement(id) {
   const selectedItem = id;
-  console.log(selectedItem);
   const search = basket.find((item) => item.id === selectedItem.id);
   if (!search) return;
   if (search.item === 1) {
     selectedItem.parentElement.innerHTML = `
-    <p onClick = addBtn(${selectedItem.id + "1"})> Add </p>
+    <p onClick = addBtn(${
+      selectedItem.id + "1"
+    }) style = "cursor: pointer"> Add </p>
     `;
     search.item -= 1;
-    
   } else {
     search.item -= 1;
   }
@@ -71,10 +84,8 @@ function decrement(id) {
 }
 function update(id) {
   const search = basket.find((item) => item.id === id);
-  console.log(search.item);
-  // if(search.item)
   calcVal();
-  if(search.item === 0)return;
+  if (search.item === 0) return;
   document.getElementById(id).textContent = String(search.item);
 }
 
